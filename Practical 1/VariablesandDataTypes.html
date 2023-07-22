@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variables and Data Types</title>
+</head>
+
+<body>
+    <button onclick="variable()">Click Here!</button><br>
+    <div id="demo"></div><br>
+    <script>
+        function variable() {
+            var n1 = 20;
+            var n2 = 40;
+            var result = n1 + n2;
+            console.log(result);
+
+            let fname = "Himanshu";
+            let lname = "Vasoya";
+            let name = fname.concat(" ", lname);
+            console.log(name);
+
+            const arr = ["Ahmedabad", "75km", "Rajkot", "250km"];
+            console.log(arr);
+
+            var output = document.getElementById("demo");
+            output.innerHTML += "Variable example: " + result + "<br>";
+            output.innerHTML += "Let example: " + name + "<br>";
+            output.innerHTML += "Const example: " + arr + "<br>";
+        }
+    </script>
+</body>
+
+</html>

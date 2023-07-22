@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error Handling</title>
+</head>
+<body>
+    Enter number : <input type="text" id="numid"><br>
+    <button onclick="mydisplay()">Display</button><br>
+    <div id="demoId"></div><br>
+    <script>
+        function mydisplay()
+        {
+            let num =parseInt(document.getElementById("numid").value);
+            let msg = document.getElementById("demoId");
+            msg.innerHTML="";
+            function throwAnError()
+            {
+                if(num<0)
+                {
+                    throw new Error("You entered Negative number!!");
+                }
+            }
+            try{
+                throwAnError();
+            }catch(error){
+                msg.innerHTML=error.message+"<br>";
+                msg.innerHTML+=error.name;
+                console.log(error.message);
+                console.log(error.name);
+            }
+        }
+    </script>
+</body>
+</html>
